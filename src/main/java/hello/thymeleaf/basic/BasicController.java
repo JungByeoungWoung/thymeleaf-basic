@@ -89,6 +89,11 @@ public class BasicController {
         return "basic/each";
     }
 
+    @GetMapping("/block")
+    public String block(Model model) {
+        addUsers(model);
+        return "/basic/block";
+    }
     @GetMapping("/condition")
     public String condition(Model model) {
         addUsers(model);
