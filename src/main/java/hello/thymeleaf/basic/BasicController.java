@@ -94,6 +94,16 @@ public class BasicController {
         addUsers(model);
         return "/basic/block";
     }
+
+    @GetMapping("/javascript")
+    public String javascript(Model model) {
+        model.addAttribute("user", new User("jbw4", 10));
+        model.addAttribute("user", new User("jbw5", 20));
+        model.addAttribute("user", new User("jbw6", 30));
+        addUsers(model);
+        return "basic/javascript";
+    }
+
     @GetMapping("/condition")
     public String condition(Model model) {
         addUsers(model);
